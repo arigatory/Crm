@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSite", "WebSite", "{46804B0D-28D0-4720-811C-07E47A1A43D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopApp", "DesktopApp", "{EA2E5300-8DB4-4305-A526-C4A616780D74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TelegramBot", "TelegramBot", "{B5097BB1-9BE2-4D68-B188-67E8B4719ABF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiService", "ApiService", "{401DB851-113E-4DF6-8FC0-E28EDEBAEACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService.Api", "ApiService\ApiService.Api\ApiService.Api.csproj", "{E312BEAE-0D89-47E7-85CD-2C48EAB173BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService.Infrastructure", "ApiService\ApiService.Infrastructure\ApiService.Infrastructure.csproj", "{5EDD0A93-B17F-422A-A3C6-4A1C347455D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService.Application", "ApiService\ApiService.Application\ApiService.Application.csproj", "{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite\WebSite.csproj", "{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E312BEAE-0D89-47E7-85CD-2C48EAB173BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E312BEAE-0D89-47E7-85CD-2C48EAB173BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E312BEAE-0D89-47E7-85CD-2C48EAB173BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E312BEAE-0D89-47E7-85CD-2C48EAB173BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EDD0A93-B17F-422A-A3C6-4A1C347455D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EDD0A93-B17F-422A-A3C6-4A1C347455D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EDD0A93-B17F-422A-A3C6-4A1C347455D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EDD0A93-B17F-422A-A3C6-4A1C347455D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E312BEAE-0D89-47E7-85CD-2C48EAB173BC} = {401DB851-113E-4DF6-8FC0-E28EDEBAEACA}
+		{5EDD0A93-B17F-422A-A3C6-4A1C347455D5} = {401DB851-113E-4DF6-8FC0-E28EDEBAEACA}
+		{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35} = {401DB851-113E-4DF6-8FC0-E28EDEBAEACA}
+		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B} = {46804B0D-28D0-4720-811C-07E47A1A43D6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F12DD673-5E4C-4481-80AF-0D3647723935}
+	EndGlobalSection
+EndGlobal

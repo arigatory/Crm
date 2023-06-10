@@ -1,0 +1,27 @@
+﻿@model IReadOnlyList<WebSite.Models.BlogPost>
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Crm</title>
+    </head>
+    <body>
+    <h1>@ViewBag.CurrentBlogPosts</h1>
+    @foreach (var post in Model)
+    {
+        <div>
+            <h3>
+                @post.Created
+            </h3>
+            <h2>
+                @post.Title
+            </h2>
+            <p>
+                @post.Content
+            </p>
+        </div>
+    }
+    </body>
+</html>
