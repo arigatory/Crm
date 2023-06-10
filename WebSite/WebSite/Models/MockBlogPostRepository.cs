@@ -2,7 +2,8 @@
 
 public class MockBlogPostRepository : IBlogPostRepository
 {
-    public IReadOnlyList<BlogPost> AllBlogPosts => new List<BlogPost>
+    public IReadOnlyList<BlogPost> AllBlogPosts => 
+        new List<BlogPost>
     {
         new BlogPost
         {

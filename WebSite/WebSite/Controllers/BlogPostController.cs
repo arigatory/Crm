@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebSite.Models;
+using WebSite.ViewModels;
 
 namespace WebSite.Controllers;
 
@@ -17,7 +18,7 @@ public class BlogPostController : Controller
 
     public IActionResult List()
     {
-        ViewBag.CurrentBlogPosts = "All";
-        return View(_blogPostRepository.AllBlogPosts);
+        var blogPostsVM = new BlogPostListViewModel(_blogPostRepository.AllBlogPosts);
+        return View(blogPostsVM);
     }
 }

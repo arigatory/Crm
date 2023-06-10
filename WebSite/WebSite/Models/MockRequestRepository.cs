@@ -2,7 +2,8 @@
 
 public class MockRequestRepository : IRequestRepository
 {
-    public IReadOnlyList<Request> AllRequests => new List<Request>{
+    public IReadOnlyList<Request> AllRequests => 
+        new List<Request>{
         new Request
         {
              Id = Guid.NewGuid(),
