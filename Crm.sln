@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TelegramBot", "TelegramBot"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiService", "ApiService", "{401DB851-113E-4DF6-8FC0-E28EDEBAEACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService.Api", "ApiService\ApiService.Api\ApiService.Api.csproj", "{E312BEAE-0D89-47E7-85CD-2C48EAB173BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiService.Api", "ApiService\ApiService.Api\ApiService.Api.csproj", "{E312BEAE-0D89-47E7-85CD-2C48EAB173BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService.Infrastructure", "ApiService\ApiService.Infrastructure\ApiService.Infrastructure.csproj", "{5EDD0A93-B17F-422A-A3C6-4A1C347455D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiService.Infrastructure", "ApiService\ApiService.Infrastructure\ApiService.Infrastructure.csproj", "{5EDD0A93-B17F-422A-A3C6-4A1C347455D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService.Application", "ApiService\ApiService.Application\ApiService.Application.csproj", "{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiService.Application", "ApiService\ApiService.Application\ApiService.Application.csproj", "{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite\WebSite.csproj", "{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSite", "WebSite\WebSite\WebSite.csproj", "{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot", "TelegramBot\TelegramBot\TelegramBot.csproj", "{791AA01E-4068-478E-8E94-3FAC6E22FE4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{791AA01E-4068-478E-8E94-3FAC6E22FE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{791AA01E-4068-478E-8E94-3FAC6E22FE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{791AA01E-4068-478E-8E94-3FAC6E22FE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{791AA01E-4068-478E-8E94-3FAC6E22FE4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{5EDD0A93-B17F-422A-A3C6-4A1C347455D5} = {401DB851-113E-4DF6-8FC0-E28EDEBAEACA}
 		{50E0AEE5-4F1C-4101-A626-E8B9BAFDBB35} = {401DB851-113E-4DF6-8FC0-E28EDEBAEACA}
 		{68D1BCA5-B303-4E0E-8F92-26C95C9A704B} = {46804B0D-28D0-4720-811C-07E47A1A43D6}
+		{791AA01E-4068-478E-8E94-3FAC6E22FE4E} = {B5097BB1-9BE2-4D68-B188-67E8B4719ABF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F12DD673-5E4C-4481-80AF-0D3647723935}
