@@ -21,4 +21,13 @@ public class BlogPostController : Controller
         var blogPostsVM = new BlogPostListViewModel(_blogPostRepository.AllBlogPosts);
         return View(blogPostsVM);
     }
+
+    public IActionResult Details(Guid id)
+    {
+        var blogPost = _blogPostRepository.GetById(id);
+        
+        if (blogPost is null) return NotFound();
+        
+        return View(blogPost);
+    }
 }

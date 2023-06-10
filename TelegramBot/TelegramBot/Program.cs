@@ -4,6 +4,7 @@ using Telegram.Bot.Polling;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types;
 
+// this token only for demo purposes
 var token = "5954797707:AAGfhi4cfA2T5knC_iZd833qPt4VPrkNNOo";
 
 var botClient = new TelegramBotClient(token);

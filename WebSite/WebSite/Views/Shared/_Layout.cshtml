@@ -25,12 +25,12 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Рабочий стол</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Главная</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Проекты</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Услуги</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Блог</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Контакты</a>
+                    <a asp-controller="Home" asp-action="Index" class="text-sm font-semibold leading-6 text-gray-900">Рабочий стол</a>
+                    <a asp-controller="Home" asp-action="Index" class="text-sm font-semibold leading-6 text-gray-900">Главная</a>
+                    <a asp-controller="Project" asp-action="List" class="text-sm font-semibold leading-6 text-gray-900">Проекты</a>
+                    <a asp-controller="Service" asp-action="List" class="text-sm font-semibold leading-6 text-gray-900">Услуги</a>
+                    <a asp-controller="BlogPost" asp-action="List" class="text-sm font-semibold leading-6 text-gray-900">Блог</a>
+                    <a asp-controller="Contact" asp-action="Index" class="text-sm font-semibold leading-6 text-gray-900">Контакты</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>

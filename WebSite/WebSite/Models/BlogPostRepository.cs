@@ -16,4 +16,8 @@ public class BlogPostRepository : IBlogPostRepository
         }
     }
 
+    public BlogPost? GetById(Guid id)
+    {
+        return _context.BlogPosts.FirstOrDefault(x => x.Id == id);
+    }
 }
