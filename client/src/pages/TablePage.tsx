@@ -1,4 +1,3 @@
-import { Table } from "../components/Table";
 
 function TablePage() {
   return (
