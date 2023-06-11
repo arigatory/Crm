@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
   return (
-    <div className="flex fixed right-0 left-0 top-0 pb-5 pt-3 bg-white">
+    <div className="flex right-0 left-0 top-0 pb-5 pt-3 bg-white">
       <NavLink to="/desktop">
         <HeaderItem text="Рабочий стол" icon={HiOutlinePuzzle} />
       </NavLink>

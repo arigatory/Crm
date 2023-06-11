@@ -1,43 +1,39 @@
-import { useState } from 'react';
-import { GoChevronDown, GoChevronLeft } from 'react-icons/go';
+export type TableConfigType<T> = {
+  label: string;
+  render: (row: T) => React.ReactNode | string | number;
+}[];
 
-type TableProps = {
-  items: {
-    id: string;
-    label: string;
-    content: string;
-  }[];
+type TableProps<T> = {
+  data: T[];
+  config: TableConfigType<T>;
+  keyFn: (x: T) => string;
 };
 
-export const Table = ({ items }: TableProps) => {
-  const [expandedIndex, setExpanded] = useState<number | null>(-1);
+export const Table = <T,>({ data, config, keyFn }: TableProps<T>) => {
+  const renderedHeaders = config.map((column) => {
+    return <th key={column.label}>{column.label}</th>;
+  });
 
-  const handleClick = (index: number) => {
-    if (index === expandedIndex) {
-      return setExpanded(-1);
-    }
-    setExpanded(index);
-  };
-
-  const renderedItems = items.map((item, index) => {
-    const isExpanded = index === expandedIndex;
-
-    const icon = (
-      <span className='text-2xl'>{isExpanded ? <GoChevronDown /> : <GoChevronLeft />}</span>
-    );
-
+  const renderedRows = data.map((rowData) => {
+    const renderedCells = config.map((column) => {
+      return (
+        <td className="p-2" key={column.label}>
+          {column.render(rowData)}
+        </td>
+      );
+    });
     return (
-      <div key={item.id}>
-        <div
-          className="flex justify-between p-3 bg-gray-50 border-b items-center cursor-pointer"
-          onClick={() => handleClick(index)}
-        >
-          {item.label}
-          {icon}
-        </div>
-        {isExpanded && <div className="border-b p-5">{item.content}</div>}
-      </div>
+      <tr className="border-b" key={keyFn(rowData)}>
+        {renderedCells}
+      </tr>
     );
   });
-  return <div className="border-x border-t rounded">{renderedItems}</div>;
+  return (
+    <table className="table-auto border-spacing-2">
+      <thead>
+        <tr className="border-b-2">{renderedHeaders}</tr>
+      </thead>
+      <tbody>{renderedRows}</tbody>
+    </table>
+  );
 };

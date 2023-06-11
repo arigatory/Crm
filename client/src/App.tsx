@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className=" bg-gray-100 p-4">
+      <div className="p-4">
         <Outlet />
       </div>
     </>
