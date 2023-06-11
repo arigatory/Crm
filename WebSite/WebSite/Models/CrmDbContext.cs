@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebSite.Models;
 
-public class CrmDbContext : DbContext
+public class CrmDbContext : IdentityDbContext
 {
     public CrmDbContext(DbContextOptions<CrmDbContext> options) : base(options)
     {
