@@ -1,7 +1,6 @@
-﻿namespace ApiService.Application
-{
-    public class Class1
-    {
+﻿namespace ApiService.Application;
 
-    }
+public class Class1
+{
+
 }

@@ -11,8 +11,8 @@ using WebSite.Models;
 namespace WebSite.Migrations;
 
 [DbContext(typeof(CrmDbContext))]
-[Migration("20230610215000_Inital")]
-partial class Inital
+[Migration("20230611012920_AddDateTimeToRequest")]
+partial class AddDateTimeToRequest
 {
     protected override void BuildTargetModel(ModelBuilder modelBuilder)
     {
@@ -51,6 +51,9 @@ partial class Inital
 
                 b.Property<string>("Content")
                     .IsRequired()
+                    .HasColumnType("TEXT");
+
+                b.Property<DateTime>("Created")
                     .HasColumnType("TEXT");
 
                 b.Property<string>("Email")

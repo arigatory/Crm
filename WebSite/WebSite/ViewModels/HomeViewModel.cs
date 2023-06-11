@@ -1,14 +1,8 @@
-﻿using WebSite.Models;
+﻿namespace WebSite.ViewModels;
 
-namespace WebSite.ViewModels
+public class HomeViewModel
 {
-    public class HomeViewModel
-    {
-        public HomeViewModel()
-        {
-            CurrentRequest = new Request();
-        }
-
-        public Request CurrentRequest { get; set; }
-    }
+    public string? Name { get; set; }
+    public string? Email { get; set; }
+    public string? Content { get; set; }
 }

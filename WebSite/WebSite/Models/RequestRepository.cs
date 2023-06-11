@@ -26,6 +26,13 @@ public class RequestRepository : IRequestRepository
         }
     }
 
+    public void CreateRequest(Request request)
+    {
+        request.Created = DateTime.UtcNow;
+        _context.Requests.Add(request);
+        _context.SaveChanges();
+    }
+
     public Request? GetRequestById(Guid requestId)
     {
         return _context.Requests.FirstOrDefault(x => x.Id == requestId);

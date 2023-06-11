@@ -1,7 +1,6 @@
-﻿namespace ApiService.Infrastructure
-{
-    public class Class1
-    {
+﻿namespace ApiService.Infrastructure;
 
-    }
+public class Class1
+{
+
 }
