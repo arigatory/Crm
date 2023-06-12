@@ -3,4 +3,5 @@ export type BlogPost = {
   title: string;
   date: Date;
   content: string;
+  imageUrl?: string;
 };

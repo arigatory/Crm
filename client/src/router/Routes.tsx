@@ -6,6 +6,7 @@ import ProjectsPage from '../pages/ProjectsPage';
 import ServicesPage from '../pages/ServicesPage';
 import BlogPage from '../pages/BlogPage';
 import ContactsPage from '../pages/ContactsPage';
+import { LoginPage } from '../pages/LoginPage';
 
 export const routes: RouteObject[] = [
   {
@@ -18,6 +19,7 @@ export const routes: RouteObject[] = [
       {path: 'services', element: <ServicesPage />},
       {path: 'blog', element: <BlogPage />},
       {path: 'contacts', element: <ContactsPage />},
+      {path: 'login', element: <LoginPage />},
     ]
   },
 ];
