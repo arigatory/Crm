@@ -1,8 +1,10 @@
+import { BlogPostsList } from "../components/BlogPostsList";
+
 function BlogPostPage() {
 
   return (
-    <div>
-      <h1 className="text-9xl">Посты</h1>
+    <div className="container mx-auto">
+      <BlogPostsList/>
     </div>
   );
 }

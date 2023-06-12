@@ -4,6 +4,6 @@ namespace ApiService.Application.Common.Interfaces;
 
 public interface IBlogPostRepository
 {
-    IReadOnlyList<BlogPost> AllBlogPosts { get; }
-    BlogPost? GetById(Guid id);
+    Task<IReadOnlyList<BlogPost>> GetAllBlogPosts();
+    Task<BlogPost?> GetById(Guid id);
 }

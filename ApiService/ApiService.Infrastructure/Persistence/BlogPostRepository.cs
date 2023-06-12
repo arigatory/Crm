@@ -1,5 +1,6 @@
 ﻿using ApiService.Application.Common.Interfaces;
 using ApiService.Application.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiService.Infrastructure.Persistence;
 
@@ -11,16 +12,14 @@ public class BlogPostRepository : IBlogPostRepository
     {
         _context = context;
     }
-    public IReadOnlyList<BlogPost> AllBlogPosts
+
+    public async Task<IReadOnlyList<BlogPost>> GetAllBlogPosts()
     {
-        get
-        {
-            return _context.BlogPosts.ToList();
-        }
+        return await _context.BlogPosts.ToListAsync();
     }
 
-    public BlogPost? GetById(Guid id)
+    public async Task<BlogPost?> GetById(Guid id)
     {
-        return _context.BlogPosts.FirstOrDefault(x => x.Id == id);
+        return await _context.BlogPosts.FirstOrDefaultAsync(x => x.Id == id);
     }
 }

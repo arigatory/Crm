@@ -17,7 +17,7 @@ public class RequestController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpGet("all", Name = "Получить все запросы")]
+    [HttpGet(Name = "Получить все запросы")]
     public async Task<ActionResult<IReadOnlyList<RequestVm>>> GetAllRequests()
     {
         return Ok(await _mediator.Send(new GetAllRequestsQuery()));
