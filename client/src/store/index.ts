@@ -1,8 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { blogPostsReducer } from "./slices/blogPostsSlice";
+import { setupListeners } from '@reduxjs/toolkit/query';
+import { blogPostsApi } from './apis/blogPostsApi';
 
 export const store = configureStore({
   reducer: {
-    blogPosts: blogPostsReducer
-  }
+    [blogPostsApi.reducerPath]: blogPostsApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware().concat(blogPostsApi.middleware);
+  },
 });
+
+setupListeners(store.dispatch);
+
+export { useFetchBlogPostsQuery } from './apis/blogPostsApi';

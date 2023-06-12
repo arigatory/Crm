@@ -9,12 +9,9 @@ const blogPostsApi = createApi({
   endpoints(builder) {
     return {
       fetchBlogPosts: builder.query({
-        query: (blogPost: BlogPost) => {
+        query: () => {
           return {
             url: '/blog-posts',
-            params: {
-              blogPostsId: blogPost.id,
-            },
             method: 'GET',
           };
         },
@@ -22,3 +19,6 @@ const blogPostsApi = createApi({
     };
   },
 });
+
+export const { useFetchBlogPostsQuery } = blogPostsApi;
+export { blogPostsApi };
