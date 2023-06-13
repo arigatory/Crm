@@ -1,13 +1,14 @@
 ﻿using ApiService.Application.Features.Requests.Commands.SendRequest;
 using ApiService.Application.Features.Requests.Queries.GetAllRequests;
 using MediatR;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiService.Api.Controllers;
 
 [Route("api/requests")]
 [ApiController]
+[Authorize]
 public class RequestController : ControllerBase
 {
     private readonly IMediator _mediator;

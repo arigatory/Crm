@@ -17,19 +17,20 @@ public class ImageController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpGet(Name = "Получить изображение")]
-    public async Task<ActionResult<IReadOnlyList<RequestVm>>> GetImage()
+    [HttpGet("{name}", Name = "Получить изображение по имени")]
+    public async Task<ActionResult<IReadOnlyList<RequestVm>>> GetMe(string name)
     {
-        Byte[] b = await System.IO.File.ReadAllBytesAsync(@"C:\Users\ariga\Pictures\9fdad24eb5801ff15f40b0c4f200b294.jpg");
-        // You can use your own method over here.         
-        return File(b, "image/jpeg");
-    }
+        Byte[] b;
 
-    [HttpGet("me", Name = "Получить свое изображение")]
-    public async Task<ActionResult<IReadOnlyList<RequestVm>>> GetMe()
-    {
-        Byte[] b = await System.IO.File.ReadAllBytesAsync(@"Images\ivan.jpg");
-        // You can use your own method over here.         
+        try
+        {
+            b = await System.IO.File.ReadAllBytesAsync($"Images\\{name}");
+        }
+        catch
+        {
+            return NotFound();
+        }
+        // You can use your own method over here.
         return File(b, "image/jpeg");
     }
 }

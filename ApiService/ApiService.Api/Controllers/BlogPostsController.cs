@@ -1,6 +1,7 @@
 ﻿using ApiService.Application.Features.BlogPosts.Queries.GetAllBlogPosts;
 using ApiService.Application.Features.Requests.Queries.GetAllRequests;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiService.Api.Controllers;

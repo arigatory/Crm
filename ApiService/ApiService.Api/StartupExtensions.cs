@@ -1,4 +1,5 @@
-﻿using ApiService.Infrastructure.Persistence;
+﻿using ApiService.Infrastructure.Identity;
+using ApiService.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiService.Api;
@@ -18,7 +19,19 @@ public static class StartupExtensions
                 await DbInitializer.SeedAsync(app);
             }
         }
-        catch (Exception ex)
+        catch
+        {
+        }
+        try
+        {
+            var context = scope.ServiceProvider.GetService<CrmIdentityDbContext>();
+            if (context != null)
+            {
+                await context.Database.EnsureDeletedAsync();
+                await context.Database.MigrateAsync();
+            }
+        }
+        catch
         {
         }
     }

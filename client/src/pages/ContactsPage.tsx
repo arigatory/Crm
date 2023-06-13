@@ -2,7 +2,7 @@ const people = [
   {
     name: 'Иван Панченко',
     role: '.Net / React',
-    imageUrl: 'https://localhost:7298/api/images/me',
+    imageUrl: 'https://localhost:7298/api/images/ivan.jpg',
   },
   // More people...
 ];

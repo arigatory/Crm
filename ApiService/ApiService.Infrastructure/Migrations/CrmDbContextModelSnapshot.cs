@@ -47,7 +47,7 @@ namespace ApiService.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BlogPosts");
+                    b.ToTable("BlogPosts", (string)null);
                 });
 
             modelBuilder.Entity("ApiService.Application.Domain.Entities.Request", b =>
@@ -88,7 +88,7 @@ namespace ApiService.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Requests");
+                    b.ToTable("Requests", (string)null);
                 });
 #pragma warning restore 612, 618
         }
