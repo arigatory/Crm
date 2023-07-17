@@ -18,7 +18,7 @@ public static class UserCreator
         var user = await userManager.FindByEmailAsync(applicationUser.Email);
         if (user == null)
         {
-            await userManager.CreateAsync(applicationUser, "Azerty&01?");
+            await userManager.CreateAsync(applicationUser, "!QAZxsw2");
         }
     }
 }

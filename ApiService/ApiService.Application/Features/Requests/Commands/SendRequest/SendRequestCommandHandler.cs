@@ -1,9 +1,12 @@
 ﻿using ApiService.Application.Common.Interfaces;
 using ApiService.Application.Domain.Entities;
+using ApiService.Application.Features.Decorators;
 using MediatR;
 
 namespace ApiService.Application.Features.Requests.Commands.SendRequest;
 
+[Log]
+[Ivan]
 public class SendRequestCommandHandler : IRequestHandler<SendRequestCommand>
 {
     private readonly IRequestRepository _requestRepository;
